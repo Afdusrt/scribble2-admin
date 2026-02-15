@@ -23,6 +23,7 @@ $ scribble2 src_api_key text_file_path
 player1ID,player2ID | Map Name | 1:23.456 | Gear/Gearless | main video link | comment(additional povs) | word 'split' if you are doing split duo, otherwise this column is not needed
 ```
 <p>Each line is it's own run. Use UTF-8 encoding.</p>
+<p>To get player IDs, use this endpoint: "https://www.speedrun.com/api/v2/GetUserSummary?Url=player" and replace player with whose ID you want to get, this is not automated, yet, because i am too lazy.</p>
 <p>Example quad submission of 2 runs:</p>
 
 ```shell
