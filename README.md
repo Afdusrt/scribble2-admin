@@ -26,6 +26,7 @@ player1ID,player2ID | Map Name | 1:23.456 | Gear/Gearless | main video link | co
 <p>Example quad submission of 2 runs:</p>
 
 ```shell
-8r27kvgx,xy57n7v8,8e6rpq7j,8wlw6w4j|Mountain|8.97|Gearless|https://youtu.be/RNA7siYUTDE?t=1227|https://youtu.be/j-7-rl-Tvsw https://www.youtube.com/watch?v=Zp9ljnAXRYM https://youtu.be/-G3fb8jxzPg
+8r27kvgx,xy57n7v8,8e6rpq7j,8wlw6w4j|Mountain    |8.97|Gearless|https://youtu.be/RNA7siYUTDE?t=1227|https://youtu.be/j-7-rl-Tvsw https://www.youtube.com/watch?v=Zp9ljnAXRYM https://youtu.be/-G3fb8jxzPg
 8r27kvgx,xy57n7v8,8e6rpq7j,8wlw6w4j|Party Island|12.3|Gearless|https://youtu.be/RNA7siYUTDE?t=1255|https://youtu.be/j-7-rl-Tvsw https://www.youtube.com/watch?v=Zp9ljnAXRYM https://youtu.be/-G3fb8jxzPg
 ```
+(entires get .trim()ed so spaces do not matter, using a spreadsheet processor like libreoffice calc, to create the text file as a csv, shouldnt cause any problems, as long as you check "edit filter settings" use "|" as the delimiter, no string delimiter and UTF-8 encoding)
