@@ -1,4 +1,4 @@
-# WARNING: MAINTANENCE, IT SUBMITS RUNS TIMES IN WRONG FIELDS, DO NOT USE
+# STATUS: works
 
 # scribble2-admin
 Simple CLI tool for mass-submitting Color Book level runs to Speedrun.com.
