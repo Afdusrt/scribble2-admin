@@ -9,7 +9,12 @@ Simple CLI tool for mass-submitting Color Book level runs to Speedrun.com.
 std::process::Command("curl").arg(...
 ```
 to send requests to speedrun.com, so make sure curl is on your path.
-
+## Building
+just
+```shell
+$ cargo build --release
+```
+in main directory. will be in target/release/scribble2.exe
 ## Using it
 
 ```shell
