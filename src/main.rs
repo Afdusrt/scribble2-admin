@@ -47,8 +47,8 @@ fn parse_to_milliseconds(input: &str) -> String {
 		_ => { eprintln!("INVALID TEXT FILE FORMAT, wrong time"); process::exit(5) },
 	}
 	
-	ms = s*1000.0 + m*60.0 + h*60.0*60.0;
-	
+	ms = (s*1000.0 + m*60.0 + h*60.0*60.0) / 1000.0;
+
 	return ms.to_string();
 }
 
@@ -138,8 +138,11 @@ fn main() {
 		//now, assembling the data json, for the request
 		let run_settings = createpayload::thing(players, &mapId, categoryId, gear_variable_value, &time, main_video_link, comment);
 	
-		println!("{}", run_settings);
+	//	println!("{}", run_settings);
+		
+		
 		//submit runs maybe
+		
 		
 		let output = Command::new("curl")
 			.arg("-L")

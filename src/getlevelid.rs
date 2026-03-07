@@ -22,10 +22,11 @@ fn decode_weird_unicode(s: &str) -> String {
 use std::{ fs };
 
 pub fn thing3(map_name: &str) -> String {
-	let levels_json = fs::read_to_string("levels.json").expect("Could not read levels.json file");
+	let levels_json_raw = fs::read_to_string("levels.json").expect("Could not read levels.json file");
+	let levels_json = decode_weird_unicode(&levels_json_raw);
 	
 	let formatted_name = format!("\"{}\"", map_name);
-	
+	//println!("{}", formatted_name);
 	if let Some(level_name_index) = levels_json.find(&formatted_name) {
         return levels_json[(level_name_index - 17)..(level_name_index - 9)].to_string();
     }
