@@ -1,4 +1,4 @@
-# STATUS: works
+# STATUS: Works only for solo runs. Because of a speedrun.com APIv1 change, coop runs are not submittable no matter what anymore. This repository will be archived in favor of SRCutils (which is currently undergoing a transfer to APIv1)
 
 # scribble2-admin
 Simple CLI tool for mass-submitting Color Book level runs to Speedrun.com.
