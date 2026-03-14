@@ -24,32 +24,33 @@ fn check_dependancy_curl() -> bool {
 }
 
 fn parse_to_milliseconds(input: &str) -> String {
-	let parts: Vec<&str> = input.split(':').collect();
-		//last is 01.123
-	let mut h = 0.0;
-	let mut m = 0.0;
-	let mut s = 0.0;
-	let mut ms = 0.0;
-	
-	match parts.len() {
-		1 => { //s
-				s = parts[parts.len()-1].parse().expect("not a valid float");
-			},
-		2 => { //m s
-				m = parts[parts.len()-2].parse().expect("not a valid float");
-				s = parts[parts.len()-1].parse().expect("not a valid float");
-			},
-		3 => { //h m s
-				h = parts[parts.len()-3].parse().expect("not a valid float");
-				m = parts[parts.len()-2].parse().expect("not a valid float");
-				s = parts[parts.len()-1].parse().expect("not a valid float");
-			},
-		_ => { eprintln!("INVALID TEXT FILE FORMAT, wrong time"); process::exit(5) },
-	}
-	
-	ms = (s*1000.0 + m*60.0 + h*60.0*60.0) / 1000.0;
+    let parts: Vec<&str> = input.split(':').collect();
 
-	return ms.to_string();
+    let mut h = 0.0;
+    let mut m = 0.0;
+    let mut s = 0.0;
+
+    match parts.len() {
+        1 => {
+            s = parts[0].parse().expect("not a valid float");
+        }
+        2 => {
+            m = parts[0].parse().expect("not a valid float");
+            s = parts[1].parse().expect("not a valid float");
+        }
+        3 => {
+            h = parts[0].parse().expect("not a valid float");
+            m = parts[1].parse().expect("not a valid float");
+            s = parts[2].parse().expect("not a valid float");
+        }
+        _ => {
+            eprintln!("INVALID TEXT FILE FORMAT, wrong time");
+            std::process::exit(5)
+        }
+    }
+
+    let s = (s * 1000.0 + m * 60_000.0 + h * 3_600_000.0) / 1000.0;
+    s.to_string()
 }
 
 mod fetchlevels;
