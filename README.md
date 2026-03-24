@@ -1,4 +1,5 @@
-# STATUS: Works only for solo runs. Because of a speedrun.com APIv1 change, coop runs are not submittable no matter what anymore. This repository will be archived in favor of SRCutils (which is currently undergoing a transfer to APIv1)
+# STATUS: Works. 
+# Why is this not archived, when SRCutils exist?: Because this tool helps specifically with color book, where often times there are multiple combos in one session. For SRCutils, you would need to have one spreadsheets for each combo (category, solo, duo ...) 
 
 # scribble2-admin
 Simple CLI tool for mass-submitting Color Book level runs to Speedrun.com.
